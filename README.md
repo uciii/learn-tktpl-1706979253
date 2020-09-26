@@ -3,4 +3,4 @@ Lab mobile development 2020/2021 Gasal
 
 ## Folder
 - Lab1 : folder untuk tutorial 1
-- Labx : folder init untuk toturial 2 dan selanjutnya (berbeda nama di tiap branch)
+- Labx : folder yang nantinya akan berisi lab 2 dan seterusnya. Untuk para **asdos**, nanti koreksi lab 2 dan seterusnya di folder ini ya....
