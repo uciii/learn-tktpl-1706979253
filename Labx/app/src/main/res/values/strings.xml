@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Calorie Meter</string>
+    <string name="counter">0</string>
+    <string name="add">+</string>
+    <string name="button_sub">-</string>
+    <string name="reset">reset</string>
 </resources>

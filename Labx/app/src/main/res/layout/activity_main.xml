@@ -1,18 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/general_padding"
+    android:paddingRight="@dimen/general_padding"
     tools:context=".MainActivity">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/lin_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button_dec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/button_sub"
+            android:textStyle="bold"
+            android:textSize="@dimen/button_text_size"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/show_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/button_dec"
+            android:paddingLeft="@dimen/general_padding"
+            android:paddingRight="@dimen/general_padding"
+            android:layout_marginLeft="@dimen/general_padding"
+            android:layout_marginRight="@dimen/general_padding"
+            android:text="@string/counter"
+            android:textSize="@dimen/counter_size"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/border"/>
+
+        <Button
+            android:id="@+id/button_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/show_count"
+            android:textSize="@dimen/button_text_size"
+            android:textStyle="bold"
+            android:text="@string/add"
+            android:background="@color/colorAccent"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/lin_layout"
+        android:layout_marginTop="@dimen/general_padding"
+        android:textStyle="bold"
+        android:text="@string/reset"
+        android:background="@color/colorAccent"
+        android:textColor="@android:color/white" />
+
+
+
+</RelativeLayout>
