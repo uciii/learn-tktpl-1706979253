@@ -21,22 +21,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void countDown(View view) {
-        counter--;
+        subCounter();
         showCount.setText(Integer.toString(counter));
     }
 
     public void countUp(View view) {
-        counter++;
+        addCounter();
         showCount.setText(Integer.toString(counter));
     }
 
     public void countReset(View view) {
-        counter = 0;
+        resetCounter();
         showCount.setText(Integer.toString(counter));
 
         Random rnd = new Random();
         int color = Color.argb(255, rnd.nextInt(256),
                 rnd.nextInt(256), rnd.nextInt(256));
         showCount.setBackgroundColor(color);
+    }
+
+    public void addCounter(){
+        counter++;
+    }
+
+    public void subCounter(){
+        counter--;
+    }
+
+    public void resetCounter(){
+        counter = 0;
+    }
+
+    public int getCounter(){
+        return counter;
     }
 }
