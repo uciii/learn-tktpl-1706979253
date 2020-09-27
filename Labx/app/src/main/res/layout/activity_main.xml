@@ -9,8 +9,23 @@
     android:paddingRight="@dimen/general_padding"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/general_padding"
+        android:paddingRight="@dimen/general_padding"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/counter"
+        android:textSize="@dimen/counter_size"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
+        android:background="@color/myBackgroundColor"/>
+
     <LinearLayout
         android:id="@+id/lin_layout"
+        android:layout_below="@id/show_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
@@ -21,40 +36,25 @@
             android:id="@+id/button_dec"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
             android:text="@string/button_sub"
             android:textStyle="bold"
             android:textSize="@dimen/button_text_size"
+            android:layout_margin="@dimen/general_padding"
             android:background="@color/colorAccent"
-            android:textColor="@android:color/white" />
-
-        <TextView
-            android:id="@+id/show_count"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/button_dec"
-            android:paddingLeft="@dimen/general_padding"
-            android:paddingRight="@dimen/general_padding"
-            android:layout_marginLeft="@dimen/general_padding"
-            android:layout_marginRight="@dimen/general_padding"
-            android:text="@string/counter"
-            android:textSize="@dimen/counter_size"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimaryDark"
-            android:background="@drawable/border"/>
+            android:textColor="@android:color/white"
+            android:onClick="countDown"/>
 
         <Button
             android:id="@+id/button_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toRightOf="@id/show_count"
+            android:layout_margin="@dimen/general_padding"
             android:textSize="@dimen/button_text_size"
             android:textStyle="bold"
             android:text="@string/add"
             android:background="@color/colorAccent"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            android:onClick="countUp"/>
 
     </LinearLayout>
 
@@ -68,8 +68,7 @@
         android:textStyle="bold"
         android:text="@string/reset"
         android:background="@color/colorAccent"
-        android:textColor="@android:color/white" />
-
-
+        android:textColor="@android:color/white"
+        android:onClick="countReset"/>
 
 </RelativeLayout>
