@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         backButtonHandler();
-        return;
     }
 
     protected void backButtonHandler() {
