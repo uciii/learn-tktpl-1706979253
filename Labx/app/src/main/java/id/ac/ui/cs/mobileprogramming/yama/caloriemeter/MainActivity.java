@@ -1,7 +1,9 @@
 package id.ac.ui.cs.mobileprogramming.yama.caloriemeter;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +33,26 @@ public class MainActivity extends AppCompatActivity {
         exitBut.setOnClickListener(exitEvent);
         startBut.setOnClickListener(timerEvent);
         resetBut.setOnClickListener(timerEvent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        backButtonHandler();
+        return;
+    }
+
+    protected void backButtonHandler() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(MainActivity.this);
+        alertDialog.setTitle("Really Want To Leave?");
+        alertDialog.setMessage("Please press exit button on bottom of this app :)");
+
+        alertDialog.setNegativeButton("Back to APP",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        alertDialog.show();
     }
 
     protected View.OnClickListener exitEvent = new View.OnClickListener(){
