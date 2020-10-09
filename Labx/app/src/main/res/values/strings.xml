@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">Calorie Meter</string>
+    <string name="app_name">Stopwatch</string>
+    <string name="number">0</string>
+    <string name="exit">Exit</string>
+    <string name="start">Start</string>
+    <string name="reset">Reset</string>
 </resources>
