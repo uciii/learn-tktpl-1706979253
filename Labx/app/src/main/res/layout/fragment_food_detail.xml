@@ -5,8 +5,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_margin="@dimen/normalMargin"
+        android:layout_margin="@dimen/normalPadding"
         tools:context=".FoodDetailFragment">
+
+        <TextView
+            android:id="@+id/pageTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            tools:text="Food List"/>
 
         <TextView
             android:id="@+id/title"
@@ -14,6 +23,7 @@
             android:layout_height="wrap_content"
             android:textSize="21sp"
             android:textColor="@android:color/black"
+            android:textStyle="bold"
             tools:text="Gado-gado"/>
 
         <TextView

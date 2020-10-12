@@ -36,9 +36,9 @@ public class FoodListFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         List<Food> list = new ArrayList<>();
-        list.add(new Food("Gado-gado", "Gado-gado is an Indonesian salad of slightly boiled, blanched or steamed...", "123"));
-        list.add(new Food("Gado-gado2", "Gado-gado is an Indonesian salad of slightly boiled, blanched or steamed...2", "234"));
-        list.add(new Food("Gado-gado3", "Gado-gado is an Indonesian salad of slightly boiled, blanched or steamed...3", "345"));
+        list.add(new Food("Gado-gado", "Gado-gado is an Indonesian salad of slightly boiled, blanched or steamed...", "1 Plate"));
+        list.add(new Food("Mango Juice", "Mango is a very sweet fruit and hence one does not need to add sugar in it...", "100 ml"));
+        list.add(new Food("Milk Chocolate", "Sweet chocolate combined with milk....", "100 gr"));
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(list);
         binding.recyclerView.setAdapter(adapter);

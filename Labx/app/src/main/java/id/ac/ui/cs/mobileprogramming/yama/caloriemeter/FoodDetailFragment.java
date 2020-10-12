@@ -32,9 +32,15 @@ public class FoodDetailFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         SharedViewModel viewModel = new ViewModelProvider(requireActivity()).get(SharedViewModel.class);
         viewModel.getSelected().observe(getViewLifecycleOwner(), item -> {
-            binding.title.setText(item.getTitle());
-            binding.calorie.setText(item.getAmount());
-            binding.description.setText(item.getInfo());
+            String title = item.getTitle();
+            String calorie = item.getFoodCalorie(title) + " calories";
+            String info = item.getInfo() + " add some description";
+            String page = "Food Detail";
+
+            binding.pageTitle.setText(page);
+            binding.title.setText(title);
+            binding.calorie.setText(calorie);
+            binding.description.setText(info);
         });
     }
 }
