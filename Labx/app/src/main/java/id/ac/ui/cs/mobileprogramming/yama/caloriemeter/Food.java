@@ -3,9 +3,9 @@ package id.ac.ui.cs.mobileprogramming.yama.caloriemeter;
 public class Food {
     private String title;
     private String info;
-    private int amount;
+    private String amount;
 
-    public Food(String title, String info, int amount) {
+    public Food(String title, String info, String amount) {
         this.title = title;
         this.info = info;
         this.amount = amount;
@@ -19,7 +19,7 @@ public class Food {
         return info;
     }
 
-    public int getAmount() {
+    public String getAmount() {
         return amount;
     }
 }
