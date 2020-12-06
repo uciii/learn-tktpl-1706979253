@@ -40,6 +40,13 @@ public class MainActivity extends AppCompatActivity {
         showCount.setBackgroundColor(color);
     }
 
+    public void countRandom(View view) {
+        counter = randomAdd(counter);
+        showCount.setText(Integer.toString(counter));
+    }
+
+    public native int randomAdd(int counter);
+
     public void addCounter(){
         counter++;
     }
@@ -54,5 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
     public int getCounter(){
         return counter;
+    }
+
+    static {
+        System.loadLibrary("native-lib");
     }
 }
