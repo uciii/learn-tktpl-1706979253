@@ -58,17 +58,37 @@
 
     </LinearLayout>
 
-    <Button
-        android:id="@+id/button_reset"
+    <LinearLayout
+        android:layout_below="@id/lin_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/lin_layout"
-        android:layout_marginTop="@dimen/general_padding"
-        android:textStyle="bold"
-        android:text="@string/reset"
-        android:background="@color/colorAccent"
-        android:textColor="@android:color/white"
-        android:onClick="countReset"/>
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/reset"
+            android:background="@color/colorPrimary"
+            android:textColor="@android:color/white"
+            android:layout_marginHorizontal="@dimen/general_padding"
+            android:onClick="countReset"/>
+
+        <Button
+            android:id="@+id/button_random"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/general_padding"
+            android:background="@color/colorPrimary"
+            android:onClick="countRandom"
+            android:paddingVertical="1dp"
+            android:text="+ RANDOM"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </RelativeLayout>
